@@ -1,0 +1,26 @@
+<h1>Liste des candidats</h1>
+<div style="overflow-x:auto;">
+<table class="list_candidats" border=1>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Email</th>
+      <th>Photo</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @candidats.each do |candidat| %>
+      <tr>
+        <td><%= candidat.nom %></td>
+        <td><%= candidat.email %></td>
+        <td><img src=<%= candidat.photo %> width = '250' /></td>
+        <td><%= link_to 'Supprimer', candidat, method: :delete, data: { confirm: 'Etes vous sûr de vouloir supprimer ce candidat?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+
