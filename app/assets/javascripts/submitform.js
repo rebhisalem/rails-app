@@ -1,4 +1,4 @@
-jQuery(function($){
+$(function(){
 	if($('#candidat_nom').val().length < 4 || $('#candidat_email').val().length < 4) 
 	   $('#new_cand_submit').attr('disabled', true);
 

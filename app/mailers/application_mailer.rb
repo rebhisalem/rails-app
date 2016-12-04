@@ -3,6 +3,6 @@ class ApplicationMailer < ActionMailer::Base
   
   def send_email(candidat)
     @candidat = candidat
-    mail(to: @candidat.email, subject: 'Sample Email')
+    mail(to: @candidat.email, subject: 'Votre candidature est prise en compte!')
   end
 end
