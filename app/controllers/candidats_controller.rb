@@ -19,6 +19,7 @@ class CandidatsController < ApplicationController
 
     respond_to do |format|
       if @candidat.save
+		ExampleMailer.send_email(@candidat).deliver
         format.html { redirect_to candidats_url, notice: 'Candidat créé avec succès.' }
         format.json { render :show, status: :created, location: @candidat }
       else
