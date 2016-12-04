@@ -91,7 +91,6 @@ Rails.application.configure do
 	 :port                 => 587,
 	 :user_name            => 'ruby.test201612@gmail.com',
 	 :password             => 'Developper2016',
-	 :authentication       => "plain",
-	:enable_starttls_auto => true
+	 :authentication       => "plain"
 	}
 end
