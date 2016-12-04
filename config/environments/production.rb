@@ -90,7 +90,7 @@ Rails.application.configure do
 	 :address              => "smtp.gmail.com",
 	 :port                 => 587,
 	 :user_name            => 'infoshosting@gmail.com',
-	 :password             => '>Developper',
+	 :password             => 'Developper',
 	 :authentication       => "plain"
 	}
 end
