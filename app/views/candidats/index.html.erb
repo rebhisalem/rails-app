@@ -1,3 +1,7 @@
+<% if @candidats.blank? %>
+<h1>Aucun candidat n'est encore ajouté!!</h1>
+<br>
+<% else %>
 <h1>Liste des candidats</h1>
 <div style="overflow-x:auto;">
 <table class="list_candidats" border=1>
@@ -25,4 +29,4 @@
 </table>
 </div>
 <br>
-
+<% end %>

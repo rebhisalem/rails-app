@@ -1,3 +1,7 @@
+<% if @companies.blank? %>
+<h1>Aucune entreprise n'est encore ajoutée!!</h1>
+<br>
+<% else %>
 <h1>Liste des entreprises</h1>
 <div style="overflow-x:auto;">
 <table class="list_candidats" border=1>
@@ -19,4 +23,5 @@
 </table>
 </div>
 <br>
+<% end %>
 
