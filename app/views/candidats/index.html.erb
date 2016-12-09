@@ -17,7 +17,7 @@
         <td><%= candidat.nom %></td>
         <td><%= candidat.email %></td>
         <td><img src=<%= candidat.photo %> width = '250' /></td>
-        <td><%= candidat.company %></td>
+        <td><%= candidat.company.nom %></td>
         <td><%= link_to 'Supprimer', candidat, method: :delete, data: { confirm: 'Etes vous sûr de vouloir supprimer ce candidat?' } %></td>
       </tr>
     <% end %>
