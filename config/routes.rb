@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-	resources :candidats
+	resources :candidats, :companies
   root to: 'visitors#index'
 end

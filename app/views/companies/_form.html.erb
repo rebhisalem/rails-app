@@ -1,0 +1,35 @@
+<%= form_for(@company) do |f| %>
+  <% if @company.errors.any? %>
+    <div id="error_explanation">
+      <h2>Une erreur est survenue lors de l'ajout de l'entreprise:</h2>
+
+      <ul>
+      <% @candidat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nom %><br>
+    <%= f.text_field :nom, :required => true %>
+  </div>
+  <br/>
+  <div class="actions">
+    <%= f.submit :id => "new_company_submit", :value => "Valider" %>
+  </div>
+  <script>
+  $(function(){
+	if($('#company_nom').val().length < 3) 
+	   $('#new_company_submit').attr('disabled', true);
+
+	$('#company_nom').on('change paste keyup', function(){
+		if($('#company_nom').val().length >= 3) 
+			 $('#new_company_submit').attr('disabled', false);    
+		else
+			 $('#new_company_submit').attr('disabled', true);   
+	});
+});
+  </script>
+<% end %>

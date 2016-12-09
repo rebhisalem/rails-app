@@ -16,7 +16,6 @@ class CandidatsController < ApplicationController
   # POST /candidats.json
   def create
     @candidat = Candidat.new(candidat_params)
-
     respond_to do |format|
       if @candidat.save
 		ApplicationMailer.send_email(@candidat).deliver
@@ -47,6 +46,6 @@ class CandidatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def candidat_params
-      params.require(:candidat).permit(:nom, :email, :photo)
+      params.require(:candidat).permit(:nom, :email, :photo, :company_id)
     end
 end

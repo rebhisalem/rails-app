@@ -1,0 +1,22 @@
+<h1>Liste des entreprises</h1>
+<div style="overflow-x:auto;">
+<table class="list_candidats" border=1>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @companies.each do |company| %>
+      <tr>
+        <td><%= company.nom %></td>
+        <td><%= link_to 'Supprimer', company, method: :delete, data: { confirm: 'Etes vous sûr de vouloir supprimer cette entreprise?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+

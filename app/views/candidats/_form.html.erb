@@ -1,7 +1,7 @@
 <%= form_for(@candidat) do |f| %>
   <% if @candidat.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@candidat.errors.count, "error") %> prohibited this candidat from being saved:</h2>
+      <h2>Une erreur est survenue lors de l'ajout du candidat:</h2>
 
       <ul>
       <% @candidat.errors.full_messages.each do |message| %>
@@ -22,6 +22,10 @@
   <div class="field">
     <%= f.label :photo %><br>
     <%= f.file_field :photo, :required => true %>
+  </div>
+  <div class="field">
+  <%= f.label 'Entreprise' %><br>
+  <%= f.collection_select :company_id, Company.all, :id, :nom %>
   </div>
   <br/>
   <div class="actions">
