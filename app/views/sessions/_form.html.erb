@@ -1,0 +1,23 @@
+<%= form_for(:session, url: login_path) do |f| %>
+  <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+	<br>
+      <%= f.submit "Se connecter", class: "btn btn-primary" %>
+<% end %>
+  <script>
+  $(function(){
+	if($('#company_nom').val().length < 3) 
+	   $('#new_company_submit').attr('disabled', true);
+
+	$('#company_nom').on('change paste keyup', function(){
+		if($('#company_nom').val().length >= 3) 
+			 $('#new_company_submit').attr('disabled', false);    
+		else
+			 $('#new_company_submit').attr('disabled', true);   
+	});
+});
+  </script>
+

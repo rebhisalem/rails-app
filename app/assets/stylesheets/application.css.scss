@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require nivo
  */
 
  .list_candidats{
@@ -23,3 +24,47 @@
  .list_candidats thead th{
 	text-align:center !important;
  }
+ 
+@media (min-width: 768px){
+	header {
+		min-height: 100%;
+	}
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-image: image-url("banner.jpg");
+    text-align: center;
+    color: white;
+}
+#slider{
+    height: 398px;
+}
+
+footer{
+	width: 100%;
+	background-color: #373a3c !important;
+	text-align: center;
+	color: #fff;
+}
+
+.login_form{
+	width: 60%;
+	margin: 0 auto;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 768px){
+	.login_form{
+		width: 100%;
+	}
+}

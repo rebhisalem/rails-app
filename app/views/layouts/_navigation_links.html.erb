@@ -1,5 +1,12 @@
 <%# add navigation links to this file %>
+<% if session[:user_id] %>
 <li class='nav-item'><%= link_to 'Candidats', url_for(action: 'index', controller: 'candidats'), class: 'nav-link' %></li>
-<li class='nav-item'><%= link_to 'Inscrire candidat', new_candidat_path, class: 'nav-link' %></li>
 <li class='nav-item'><%= link_to 'Entreprises', url_for(action: 'index', controller: 'companies'), class: 'nav-link' %></li>
+<li class='nav-item'><%= link_to 'Inscrire candidat', new_candidat_path, class: 'nav-link' %></li>
 <li class='nav-item'><%= link_to 'Inscrire entreprise', new_company_path, class: 'nav-link' %></li>
+<li class='nav-item'><%= link_to 'Logout', logout_path, method: :delete, class: 'nav-link' %></li>
+<% else %>
+<li class='nav-item'><%= link_to 'Inscrire candidat', new_candidat_path, class: 'nav-link' %></li>
+<li class='nav-item'><%= link_to 'Inscrire entreprise', new_company_path, class: 'nav-link' %></li>
+<li class='nav-item'><%= link_to 'Login', login_path, class: 'nav-link' %></li>
+<% end %>

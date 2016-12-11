@@ -1,6 +1,11 @@
-<div class="jumbotron">
-  <h1 class="display-2">Welcome</h1>
-  <p class="lead">
-    Bienvenue à SELECTEEV.IO
-  </p>
-</div>
+	<%= nivo_slider id: "slider" do %>
+		<%= image_tag "slider1.jpg", title: "Lancez votre startup!" %>
+		<%= image_tag "slider2.jpg", title: "Vous cherchez des investisseurs?" %>
+		<%= image_tag "slider3.jpg", title: "Nous organisons vos évènements..." %>
+	<% end %>
+
+<script>
+$(window).load(function() {
+  $('#slider').nivoSlider();
+});
+</script>
